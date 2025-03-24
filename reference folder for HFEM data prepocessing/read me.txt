@@ -1,0 +1,4 @@
+this is a reference folder
+It contains how data should be organized, which script should be put where and an organigram of the workflow.
+
+

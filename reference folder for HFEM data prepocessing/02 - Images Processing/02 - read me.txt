@@ -1,0 +1,7 @@
+In this folder, DICOMs that were saved in "012" are converted into a RAW file, coupled with an .mhd file for storing metadata, and then saved into "021".
+
+In "022" you select a region of interest(ROI) using the script ROI_selection.ipynb, the images will be cropped according to this ROI.
+	note that this file also intend you to define a ROI with your phantom in case you used on during you scans.
+
+in "023" you filter you image. In this you are only intended to "color" correct your images.. So what you actually is use an histogram to see what  "grey value range" your bones appear as in the scan, and ^then shit and delete every pixel out of this range.. it is done using the script filtering.ipynb
+	!!!This script applies the same filtering to both your ROI and your phantom!!!

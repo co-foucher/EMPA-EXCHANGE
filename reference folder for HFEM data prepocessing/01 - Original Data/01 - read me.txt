@@ -1,0 +1,4 @@
+In this folder, original compressed DICOMs are meant to be saved in "011" and then decompressed and saved in "012"
+using the script "multiple_DICOM_uncompressing_and_reordering.py". They are also re-organized by their z position and numbered.
+
+#Iam am also changing the file names depending on which series they belong to

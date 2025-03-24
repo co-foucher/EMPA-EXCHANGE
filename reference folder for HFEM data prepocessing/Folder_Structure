@@ -1,0 +1,100 @@
+digraph {
+	graph [rankdir=LR]
+	node [shape=box]
+	"01 - Original Data" [label="01 - Original Data" fillcolor=lightyellow shape=folder style=filled]
+	"reference folder for hfem data prepocessing" -> "01 - Original Data"
+	"01 - read me.txt" [label="01 - read me.txt"]
+	"01 - Original Data" -> "01 - read me.txt"
+	"011 - compressed" [label="011 - compressed" fillcolor=lightyellow shape=folder style=filled]
+	"01 - Original Data" -> "011 - compressed"
+	"012 - uncompressed" [label="012 - uncompressed" fillcolor=lightyellow shape=folder style=filled]
+	"01 - Original Data" -> "012 - uncompressed"
+	"decompress_dicom.py" [label="decompress_dicom.py" fillcolor=lightblue style=filled]
+	"01 - Original Data" -> "decompress_dicom.py"
+	"multiple_DICOM_uncompressing_and_reordering.py" [label="multiple_DICOM_uncompressing_and_reordering.py" fillcolor=lightblue style=filled]
+	"01 - Original Data" -> "multiple_DICOM_uncompressing_and_reordering.py"
+	"single_DICOM_uncompressing_interface.py" [label="single_DICOM_uncompressing_interface.py" fillcolor=lightblue style=filled]
+	"01 - Original Data" -> "single_DICOM_uncompressing_interface.py"
+	"02 - Images Processing" [label="02 - Images Processing" fillcolor=lightyellow shape=folder style=filled]
+	"reference folder for hfem data prepocessing" -> "02 - Images Processing"
+	"02 - read me.txt" [label="02 - read me.txt"]
+	"02 - Images Processing" -> "02 - read me.txt"
+	"021 - Saved as Raw" [label="021 - Saved as Raw" fillcolor=lightyellow shape=folder style=filled]
+	"02 - Images Processing" -> "021 - Saved as Raw"
+	"dicom_to_mhd.py" [label="dicom_to_mhd.py" fillcolor=lightblue style=filled]
+	"021 - Saved as Raw" -> "dicom_to_mhd.py"
+	"tiff_to_mhd.py" [label="tiff_to_mhd.py" fillcolor=lightblue style=filled]
+	"021 - Saved as Raw" -> "tiff_to_mhd.py"
+	"022 - ROI selection" [label="022 - ROI selection" fillcolor=lightyellow shape=folder style=filled]
+	"02 - Images Processing" -> "022 - ROI selection"
+	"ROI_selection.ipynb" [label="ROI_selection.ipynb" fillcolor=lightblue style=filled]
+	"022 - ROI selection" -> "ROI_selection.ipynb"
+	"023 - filtering" [label="023 - filtering" fillcolor=lightyellow shape=folder style=filled]
+	"02 - Images Processing" -> "023 - filtering"
+	"filtering.ipynb" [label="filtering.ipynb" fillcolor=lightblue style=filled]
+	"023 - filtering" -> "filtering.ipynb"
+	"03 - Simulation Setup" [label="03 - Simulation Setup" fillcolor=lightyellow shape=folder style=filled]
+	"reference folder for hfem data prepocessing" -> "03 - Simulation Setup"
+	"03 - read me.txt" [label="03 - read me.txt"]
+	"03 - Simulation Setup" -> "03 - read me.txt"
+	"031 - create mesh volume" [label="031 - create mesh volume" fillcolor=lightyellow shape=folder style=filled]
+	"03 - Simulation Setup" -> "031 - create mesh volume"
+	python [label=python fillcolor=lightyellow shape=folder style=filled]
+	"031 - create mesh volume" -> python
+	"crack filling.ipynb" [label="crack filling.ipynb" fillcolor=lightblue style=filled]
+	python -> "crack filling.ipynb"
+	"greyscale_measure.ipynb" [label="greyscale_measure.ipynb" fillcolor=lightblue style=filled]
+	python -> "greyscale_measure.ipynb"
+	"map_bone_region.ipynb" [label="map_bone_region.ipynb" fillcolor=lightblue style=filled]
+	python -> "map_bone_region.ipynb"
+	"map_keratine_region.ipynb" [label="map_keratine_region.ipynb" fillcolor=lightblue style=filled]
+	python -> "map_keratine_region.ipynb"
+	"map_multimaterial_region.ipynb" [label="map_multimaterial_region.ipynb" fillcolor=lightblue style=filled]
+	python -> "map_multimaterial_region.ipynb"
+	"map_whole_meshing_region.ipynb" [label="map_whole_meshing_region.ipynb" fillcolor=lightblue style=filled]
+	python -> "map_whole_meshing_region.ipynb"
+	"segmentation workflow.pptx" [label="segmentation workflow.pptx"]
+	python -> "segmentation workflow.pptx"
+	"032 - apply mesh" [label="032 - apply mesh" fillcolor=lightyellow shape=folder style=filled]
+	"03 - Simulation Setup" -> "032 - apply mesh"
+	"033 - apply material" [label="033 - apply material" fillcolor=lightyellow shape=folder style=filled]
+	"03 - Simulation Setup" -> "033 - apply material"
+	"034 - material edit" [label="034 - material edit" fillcolor=lightyellow shape=folder style=filled]
+	"03 - Simulation Setup" -> "034 - material edit"
+	"material_edit.py" [label="material_edit.py" fillcolor=lightblue style=filled]
+	"034 - material edit" -> "material_edit.py"
+	"035 - repair mesh" [label="035 - repair mesh" fillcolor=lightyellow shape=folder style=filled]
+	"03 - Simulation Setup" -> "035 - repair mesh"
+	"repair_mesh_faster.ipynb" [label="repair_mesh_faster.ipynb" fillcolor=lightblue style=filled]
+	"035 - repair mesh" -> "repair_mesh_faster.ipynb"
+	"036 - contact-step" [label="036 - contact-step" fillcolor=lightyellow shape=folder style=filled]
+	"03 - Simulation Setup" -> "036 - contact-step"
+	"delete_element_from_list.py" [label="delete_element_from_list.py" fillcolor=lightblue style=filled]
+	"036 - contact-step" -> "delete_element_from_list.py"
+	"impact_simulation_setup.py" [label="impact_simulation_setup.py" fillcolor=lightblue style=filled]
+	"036 - contact-step" -> "impact_simulation_setup.py"
+	"impact_simulation_setup_2.py" [label="impact_simulation_setup_2.py" fillcolor=lightblue style=filled]
+	"036 - contact-step" -> "impact_simulation_setup_2.py"
+	"impact_simulation_setup_3.py" [label="impact_simulation_setup_3.py" fillcolor=lightblue style=filled]
+	"036 - contact-step" -> "impact_simulation_setup_3.py"
+	"impact_simulation_setup_original.py" [label="impact_simulation_setup_original.py" fillcolor=lightblue style=filled]
+	"036 - contact-step" -> "impact_simulation_setup_original.py"
+	"04 - Results" [label="04 - Results" fillcolor=lightyellow shape=folder style=filled]
+	"reference folder for hfem data prepocessing" -> "04 - Results"
+	"05 - Extras" [label="05 - Extras" fillcolor=lightyellow shape=folder style=filled]
+	"reference folder for hfem data prepocessing" -> "05 - Extras"
+	Folder_Structure [label=Folder_Structure]
+	"reference folder for hfem data prepocessing" -> Folder_Structure
+	"Folder_Structure.pdf" [label="Folder_Structure.pdf"]
+	"reference folder for hfem data prepocessing" -> "Folder_Structure.pdf"
+	"Folder_Structure.py" [label="Folder_Structure.py" fillcolor=lightblue style=filled]
+	"reference folder for hfem data prepocessing" -> "Folder_Structure.py"
+	"medtool-worflow.xml" [label="medtool-worflow.xml"]
+	"reference folder for hfem data prepocessing" -> "medtool-worflow.xml"
+	"medtool-worflow.xml.bak" [label="medtool-worflow.xml.bak"]
+	"reference folder for hfem data prepocessing" -> "medtool-worflow.xml.bak"
+	"read me.txt" [label="read me.txt"]
+	"reference folder for hfem data prepocessing" -> "read me.txt"
+	"visual workflow.pptx" [label="visual workflow.pptx"]
+	"reference folder for hfem data prepocessing" -> "visual workflow.pptx"
+}

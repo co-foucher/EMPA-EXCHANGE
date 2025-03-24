@@ -1,0 +1,14 @@
+This folder is meant for you to setup your simulation and is therefore much bigger..
+
+It is structured as follow:
+	031 - create mesh volume: in this folder you are to create a MASK* of the volumes you want to mesh. This is all done using python. Have a look at the "segmentation workflow.pptx" to understand better.
+	032 - apply mesh: in this folder, you are to use medtool to convert you mask into a tetrahedral mesh. This mesh is saved inside an ABAQUS inp file
+	033 - apply material:  in this folder, you are to use medtool to apply material properties to your elements.
+	034 - material edit: use material_edit.py to modify the materials created by medtool as you wish
+	035 - repair mesh: here you can use the script repair_mesh_faster.ipynb to detect any un-conected element and delete them (:
+	036 - contact-step: because ABAQUS/CAE is slow and a pain to use...
+
+
+
+
+*it is still a RAW file
