@@ -7,6 +7,39 @@ import time
 import numpy.ma as ma
 import logging
 
+"""
+This script is intended to be used as you would a library. Import it as such:
+
+    import sys
+    # Add the directory to the sys.path
+    sys.path.append('D:/COFO - HP/03 - Github/dvpt-at-EMPA/HappyBisons/image analysis')
+    # Now you can import modules from that directory
+    import tools.CT_visualization_window as CT_visualization_window
+    %matplotlib qt
+
+!!!! do not forget %matplotlib qt !!!!!
+
+You should be able to easily add more "action buttons" by adding more functions in this script.
+
+
+it is structured as follow:
+
+- setups:
+    - window: defined the figure, sliders..
+    - buttons: defines the action buttons, and which function they activate
+- (small) actions: list of small functions; 
+    - rotate_view, next_slice, prev_slice, update_plot, reset_window, change_button_color, onscroll, greyvalue_at_coord, calculate_average, make_greyscale_inRGB
+- (big) actions:
+    - rainbow colors
+    - histogram
+    - on click
+
+- logger: defines the logger for storing errors and displaying messages
+- main: main functions that should be the only ones called a tools from the library
+
+
+"""
+
 
 # =======================================================================================================
 # ================================================== setups =============================================
