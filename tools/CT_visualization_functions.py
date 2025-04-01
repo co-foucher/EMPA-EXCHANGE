@@ -213,7 +213,7 @@ def blend_images(image1: np.ndarray, image2: np.ndarray, blend: float) -> np.nda
 def browse_blended_images(images1, images2,block_value:bool):
 
     '''
-    Lets you use the blend function to then plot these blended images in an interactive way.
+    Lets you use the blend function to then plot these blended images in an interactive way. You can dinamically change the "blending factor"
 
     Args:
         images1 (sitk.Image): First image stack in SimpleITK format.
